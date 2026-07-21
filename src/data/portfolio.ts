@@ -1,12 +1,26 @@
 /**
  * Centralized data for all portfolio sections.
- * Edit this file to update project details, skills, or contact links.
+ * Updated directly from Abdelrahman A. Elsheref's CV.
  */
+
+// ── Personal Info ──────────────────────────────
+
+export const PERSONAL = {
+  name: "Abdelrahman A. Elsheref",
+  title: "Final-year CS Student & Software Engineer",
+  location: "Cairo, Egypt",
+  phone: "+20 1143850502",
+  email: "abdelrahman3535.elsheref@gmail.com",
+  github: "https://github.com/Abdoae35",
+  linkedin: "https://www.linkedin.com/in/abdelrahman-elsheref/",
+  resumeUrl: "/resume.pdf",
+};
 
 // ── Navigation ──────────────────────────────────
 
 export const NAV_LINKS = [
   { label: "Projects", href: "#projects" },
+  { label: "Experience", href: "#experience" },
   { label: "Skills", href: "#skills" },
   { label: "About", href: "#about" },
   { label: "Contact", href: "#contact" },
@@ -20,11 +34,8 @@ export interface Project {
   description: string;
   techStack: string[];
   highlights: string[];
-  /** Link to live demo or app store — leave empty string if none */
   liveUrl: string;
-  /** Link to source code — leave empty string if private */
   sourceUrl: string;
-  /** Placeholder flag for projects you haven't filled in yet */
   isPlaceholder?: boolean;
 }
 
@@ -33,26 +44,88 @@ export const PROJECTS: Project[] = [
     title: "FitPanel",
     tagline: "SaaS platform for online fitness coaches",
     description:
-      "A comprehensive Blazor Server application built on .NET 9 that gives fitness coaches a centralized dashboard to manage clients, track subscriptions, and deliver personalized workout and diet plans — complete with professional PDF exports.",
+      "A comprehensive Blazor Server SaaS application built on .NET 9 that gives fitness coaches a centralized dashboard to manage clients, track subscriptions, and deliver personalized workout and diet plans — complete with professional PDF exports.",
     techStack: [
       "Blazor Server",
-      ".NET 9",
-      "C#",
-      "PDFShift API",
+      "ASP.NET Core",
+      "Entity Framework Core",
       "SQL Server",
+      "PDFShift API",
     ],
     highlights: [
       "Engineered full English/Arabic localization using .resx resource files, enabling seamless RTL layout switching at runtime.",
-      "Redesigned PDF exports by replacing emoji-based icons with inline SVGs, producing a polished, print-ready athletic aesthetic.",
-      "Applied OWASP security best practices across the application — input validation, anti-CSRF tokens, and secure authentication flows.",
+      "Implemented role-based access control (Admin & Coach) and designed a scalable relational database schema.",
+      "Redesigned PDF exports by replacing emoji icons with inline SVGs, producing a polished athletic look.",
+      "Applied OWASP security best practices across input validation, anti-CSRF, and secure authentication flows.",
     ],
-    // TODO: Replace with your actual URLs
     liveUrl: "",
-    sourceUrl: "https://github.com/yourusername/fitpanel",
+    sourceUrl: "https://github.com/Abdoae35/FitPanel",
+  },
+  {
+    title: "JobBoard",
+    tagline: "Full-stack job platform connecting recruiters & job seekers",
+    description:
+      "A modern job board web application featuring secure role-based authentication, interactive recruiter dashboards, and job application tracking built with Next.js App Router and Supabase.",
+    techStack: [
+      "Next.js",
+      "React",
+      "TypeScript",
+      "Node.js",
+      "PostgreSQL",
+      "Supabase Auth",
+    ],
+    highlights: [
+      "Implemented job posting, application tracking, and recruiter management via REST APIs on Supabase/PostgreSQL.",
+      "Built a responsive UI with React and Next.js App Router using reusable components and protected routes.",
+      "Architected secure role-based access for job seekers and recruiters with seamless session handling.",
+    ],
+    liveUrl: "",
+    sourceUrl: "https://github.com/Abdoae35",
+  },
+  {
+    title: "Food Trucks Platform",
+    tagline: "End-to-end ordering platform for customers & food truck owners",
+    description:
+      "A full-stack web application designed to connect users with local food trucks, offering streamlined menu browsing, shopping carts, and real-time order status tracking.",
+    techStack: [
+      "Node.js",
+      "Express",
+      "PostgreSQL",
+      "Knex.js",
+      "jQuery",
+      "RESTful API",
+    ],
+    highlights: [
+      "Designed and built 22 RESTful API endpoints for orders, carts, menus, and user management.",
+      "Implemented shopping cart management, order placement, and order status tracking end-to-end.",
+      "Optimized query performance and schema structure with Knex.js migrations and PostgreSQL.",
+    ],
+    liveUrl: "",
+    sourceUrl: "https://github.com/Abdoae35",
+  },
+  {
+    title: "Afforestation Achievement System",
+    tagline: "Plantation progress & environmental management platform",
+    description:
+      "A full-stack web application built to monitor afforestation projects with multi-role access (Admin, User, Viewer), real-time progress tracking, and interactive data visualization.",
+    techStack: [
+      "Blazor",
+      "ASP.NET Core",
+      "Entity Framework Core",
+      "SQL Server",
+      "C#",
+    ],
+    highlights: [
+      "Developed a multi-tier permission system with Admin, User, and Viewer roles.",
+      "Implemented secure CRUD operations and data visualization for plantation progress tracking.",
+      "Designed intuitive dashboards for monitoring environmental impact metrics across locations.",
+    ],
+    liveUrl: "",
+    sourceUrl: "https://github.com/Abdoae35",
   },
   {
     title: "se7aty",
-    tagline: "Mobile health companion app",
+    tagline: "Mobile health companion application",
     description:
       "A Flutter mobile application designed around clean architecture principles, providing a smooth, native-feel experience backed by Firebase for authentication and real-time data sync.",
     techStack: [
@@ -65,27 +138,87 @@ export const PROJECTS: Project[] = [
     highlights: [
       "Implemented structured state management with Cubit and BlocBuilder, keeping UI logic testable and decoupled from business rules.",
       "Configured Firebase services end-to-end — authentication, Firestore, and analytics — with environment-specific build flavors.",
-      "Generated polished adaptive app icons across all densities using flutter_launcher_icons, ensuring pixel-perfect branding on both platforms.",
+      "Generated polished adaptive app icons across all densities using flutter_launcher_icons.",
     ],
-    // TODO: Replace with your actual URLs
     liveUrl: "",
-    sourceUrl: "https://github.com/yourusername/se7aty",
+    sourceUrl: "https://github.com/Abdoae35",
+  },
+];
+
+// ── Experience & Education ──────────────────────
+
+export interface ExperienceItem {
+  role: string;
+  company: string;
+  location: string;
+  period: string;
+  type: string;
+  bullets: string[];
+}
+
+export const EXPERIENCES: ExperienceItem[] = [
+  {
+    role: "Freelance Software Engineer",
+    company: "Mostaqel & Upwork",
+    location: "Remote",
+    period: "2024 – Present",
+    type: "Freelance",
+    bullets: [
+      "Delivered full-stack web projects for clients using JavaScript/TypeScript, React, Node.js, and .NET.",
+      "Built and consumed REST APIs, working directly with clients from initial requirements to production deployment.",
+      "Ensured high code quality, security practices, and responsive design across all client deliverables.",
+    ],
   },
   {
-    // ── PLACEHOLDER: Add your next project here ──
-    title: "Project 3",
-    tagline: "Your next project goes here",
-    description:
-      "Describe the problem this project solves and the approach you took. Keep it concise but specific — recruiters and engineers both read this.",
-    techStack: ["Tech 1", "Tech 2", "Tech 3"],
-    highlights: [
-      "Replace this with a specific technical challenge you solved.",
-      "Add another highlight about architecture or performance.",
-      "One more highlight about a feature or integration.",
+    role: "Full-Stack Web Developer (Apprenticeship)",
+    company: "DEPI Training Program (Digital Egypt Pioneers Initiative)",
+    location: "Hybrid",
+    period: "Oct 2024 – May 2025",
+    type: "Apprenticeship",
+    bullets: [
+      "Developed full-stack web applications and RESTful APIs using C#, ASP.NET Core, and SQL Server.",
+      "Collaborated with a development team using Git to build and maintain scalable applications.",
     ],
-    liveUrl: "",
-    sourceUrl: "",
-    isPlaceholder: true,
+  },
+];
+
+export interface EducationItem {
+  degree: string;
+  institution: string;
+  location: string;
+  period: string;
+  gpa: string;
+}
+
+export const EDUCATION: EducationItem = {
+  degree: "Bachelor's in Computer Science",
+  institution: "Tanta University",
+  location: "Tanta, Egypt",
+  period: "Expected Graduation: 2027",
+  gpa: "GPA: 3.4 / 4.0",
+};
+
+export interface Certification {
+  title: string;
+  issuer: string;
+  year: string;
+}
+
+export const CERTIFICATIONS: Certification[] = [
+  {
+    title: ".NET Full-Stack Program",
+    issuer: "DEPI (Digital Egypt Pioneers Initiative)",
+    year: "2024 – 2025",
+  },
+  {
+    title: "Competitive Programming – ECPC Competition",
+    issuer: "Egyptian Collegiate Programming Contest",
+    year: "2024",
+  },
+  {
+    title: "Complete SQL Mastery",
+    issuer: "Code With Mosh",
+    year: "2024",
   },
 ];
 
@@ -93,75 +226,91 @@ export const PROJECTS: Project[] = [
 
 export interface SkillCategory {
   category: string;
-  icon: string; // Emoji used as a visual marker
+  icon: string;
   skills: string[];
 }
 
 export const SKILLS: SkillCategory[] = [
   {
-    category: "Backend",
-    icon: "⚙️",
-    skills: [".NET", "Blazor", "Node.js", "Express"],
+    category: "Languages",
+    icon: "💻",
+    skills: ["JavaScript", "TypeScript", "C#", "HTML", "CSS", "SQL", "Python", "Dart"],
   },
   {
-    category: "Mobile",
-    icon: "📱",
-    skills: ["Flutter"],
+    category: "Frameworks & Libraries",
+    icon: "⚡",
+    skills: [
+      "ASP.NET Core",
+      ".NET",
+      "Blazor",
+      "Entity Framework Core",
+      "React",
+      "Next.js",
+      "Node.js",
+      "Express",
+      "Tailwind CSS",
+      "Flutter",
+    ],
   },
   {
-    category: "Frontend",
-    icon: "🖥️",
-    skills: ["React", "Next.js"],
+    category: "APIs & Auth",
+    icon: "🔐",
+    skills: [
+      "REST APIs",
+      "MVC Architecture",
+      "Supabase Auth",
+      "Microsoft Identity",
+      "Authentication & Authorization",
+    ],
   },
   {
     category: "Databases",
     icon: "🗄️",
-    skills: ["PostgreSQL", "SQL Server", "MongoDB", "SQL"],
+    skills: ["PostgreSQL", "SQL Server", "MySQL", "Supabase", "MongoDB"],
   },
   {
-    category: "Tools",
+    category: "Tools & Practices",
     icon: "🛠️",
-    skills: ["Git", "Linux / Unix CLI"],
+    skills: [
+      "Git",
+      "GitHub",
+      "Postman",
+      "Vercel",
+      "OOP",
+      "Data Structures & Algorithms",
+      "Design Patterns",
+      "Competitive Programming",
+      "Linux / Unix CLI",
+    ],
   },
 ];
 
-// ── Contact / Social Links ──────────────────────
+// ── Social Links ────────────────────────────────
 
 export interface SocialLink {
   label: string;
   href: string;
-  /** Accessible name for screen readers */
   ariaLabel: string;
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
   {
     label: "Email",
-    // TODO: Replace with your real email
-    href: "mailto:your.email@example.com",
-    ariaLabel: "Send an email",
+    href: `mailto:${PERSONAL.email}`,
+    ariaLabel: "Send an email to Abdelrahman",
   },
   {
     label: "GitHub",
-    // TODO: Replace with your GitHub profile URL
-    href: "https://github.com/yourusername",
-    ariaLabel: "View GitHub profile",
+    href: PERSONAL.github,
+    ariaLabel: "View Abdelrahman's GitHub profile",
   },
   {
     label: "LinkedIn",
-    // TODO: Replace with your LinkedIn profile URL
-    href: "https://linkedin.com/in/yourusername",
-    ariaLabel: "View LinkedIn profile",
+    href: PERSONAL.linkedin,
+    ariaLabel: "View Abdelrahman's LinkedIn profile",
   },
 ];
 
-// ── Hero-specific URLs ──────────────────────────
-
-/** TODO: Replace with your actual resume file path (e.g., "/resume.pdf") */
-export const RESUME_URL = "/resume.pdf";
-
-/** TODO: Replace with your GitHub profile URL */
-export const GITHUB_URL = "https://github.com/yourusername";
-
-/** TODO: Replace with your LinkedIn profile URL */
-export const LINKEDIN_URL = "https://linkedin.com/in/yourusername";
+export const RESUME_URL = PERSONAL.resumeUrl;
+export const GITHUB_URL = PERSONAL.github;
+export const LINKEDIN_URL = PERSONAL.linkedin;

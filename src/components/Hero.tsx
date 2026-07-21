@@ -1,10 +1,10 @@
 "use client";
 
-import { GITHUB_URL, LINKEDIN_URL, RESUME_URL } from "@/data/portfolio";
+import { GITHUB_URL, LINKEDIN_URL, PERSONAL, RESUME_URL } from "@/data/portfolio";
 
 /**
  * Hero section — the first thing visitors see.
- * Features the name, tagline, and CTA buttons with staggered fade-in animation.
+ * Populated with Abdelrahman A. Elsheref's profile data.
  */
 export default function Hero() {
   return (
@@ -24,22 +24,24 @@ export default function Hero() {
         {/* Greeting chip */}
         <div className="animate-fade-up mb-6 inline-flex items-center gap-2 rounded-full border border-[var(--border)] bg-[var(--surface)] px-4 py-1.5 text-xs font-medium text-[var(--muted)]">
           <span className="inline-block h-2 w-2 rounded-full bg-[var(--accent)] animate-pulse" />
-          Open to opportunities
+          <span>{PERSONAL.location}</span>
+          <span className="text-[var(--border)]">&bull;</span>
+          <span>Open to Software Engineering Roles</span>
         </div>
 
         {/* Name */}
         <h1 className="animate-fade-up text-4xl font-bold tracking-tight sm:text-5xl md:text-6xl lg:text-7xl">
           Hi, I&apos;m{" "}
-          <span className="gradient-text">Abdelrahman</span>
+          <span className="gradient-text">{PERSONAL.name}</span>
         </h1>
 
         {/* Tagline */}
         <p className="animate-fade-up mt-6 text-lg leading-relaxed text-[var(--muted)] sm:text-xl">
-          Final-year CS student &amp; software developer specializing in{" "}
-          <span className="font-medium text-[var(--foreground)]">.NET / Blazor</span>{" "}
-          and{" "}
-          <span className="font-medium text-[var(--foreground)]">Flutter</span>.
-          I build polished, production-ready products end-to-end.
+          Final-year CS student &amp; Software Engineer specializing in{" "}
+          <span className="font-medium text-[var(--foreground)]">.NET / Blazor</span>,{" "}
+          <span className="font-medium text-[var(--foreground)]">Next.js</span>, and{" "}
+          <span className="font-medium text-[var(--foreground)]">Node.js</span>.
+          Building full-stack web solutions that automate workflows and solve real-world problems.
         </p>
 
         {/* CTAs */}

@@ -1,3 +1,5 @@
+import { PERSONAL } from "@/data/portfolio";
+
 /**
  * Minimal footer with copyright and a subtle back-to-top link.
  */
@@ -8,7 +10,7 @@ export default function Footer() {
     <footer className="border-t border-[var(--border)] px-6 py-8">
       <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 sm:flex-row">
         <p className="text-xs text-[var(--muted)]">
-          &copy; {year} Abdelrahman. Built with Next.js &amp; Tailwind CSS.
+          &copy; {year} {PERSONAL.name}. Built with Next.js &amp; Tailwind CSS.
         </p>
 
         <a

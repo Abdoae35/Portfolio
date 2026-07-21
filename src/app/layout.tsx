@@ -12,39 +12,41 @@ const geistMono = Geist_Mono({
   subsets: ["latin"],
 });
 
-// ── SEO & Open Graph metadata ─────────────────
-
 export const metadata: Metadata = {
-  // TODO: Update the title and description with your full name
-  title: "Abdelrahman — Software Developer",
+  title: "Abdelrahman A. Elsheref — Software Engineer",
   description:
-    "Portfolio of Abdelrahman — final-year CS student and software developer specializing in .NET/Blazor and Flutter. View projects, skills, and experience.",
+    "Portfolio of Abdelrahman A. Elsheref — final-year CS student and software engineer specializing in .NET/Blazor, React/Next.js, Node.js, and Flutter. View projects, experience, skills, and certifications.",
   keywords: [
-    "Abdelrahman",
-    "software developer",
+    "Abdelrahman A. Elsheref",
+    "Abdelrahman Elsheref",
+    "software engineer",
     "portfolio",
     ".NET",
     "Blazor",
+    "ASP.NET Core",
+    "React",
+    "Next.js",
+    "Node.js",
     "Flutter",
-    "full-stack",
+    "Cairo",
+    "Egypt",
     "CS student",
   ],
-  authors: [{ name: "Abdelrahman" }],
+  authors: [{ name: "Abdelrahman A. Elsheref" }],
   openGraph: {
     type: "website",
     locale: "en_US",
-    // TODO: Replace with your deployed Vercel URL
-    url: "https://your-portfolio.vercel.app",
-    title: "Abdelrahman — Software Developer",
+    url: "https://github.com/Abdoae35",
+    title: "Abdelrahman A. Elsheref — Software Engineer",
     description:
-      "Final-year CS student & software developer specializing in .NET/Blazor and Flutter.",
-    siteName: "Abdelrahman Portfolio",
+      "Final-year CS student & software engineer specializing in .NET, Next.js, Node.js, and Flutter.",
+    siteName: "Abdelrahman A. Elsheref Portfolio",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Abdelrahman — Software Developer",
+    title: "Abdelrahman A. Elsheref — Software Engineer",
     description:
-      "Final-year CS student & software developer specializing in .NET/Blazor and Flutter.",
+      "Final-year CS student & software engineer specializing in .NET, Next.js, Node.js, and Flutter.",
   },
   robots: {
     index: true,

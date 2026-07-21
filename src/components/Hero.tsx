@@ -37,11 +37,11 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="animate-fade-up mt-6 text-lg leading-relaxed text-[var(--muted)] sm:text-xl">
-          Final-year CS student &amp; Software Engineer specializing in{" "}
-          <span className="font-medium text-[var(--foreground)]">.NET / Blazor</span>,{" "}
-          <span className="font-medium text-[var(--foreground)]">Next.js</span>, and{" "}
-          <span className="font-medium text-[var(--foreground)]">Node.js</span>.
-          Building full-stack web solutions that automate workflows and solve real-world problems.
+          I&apos;m a final-year CS student who treats software like a craft — obsessive attention to detail, daily discipline, and a full-stack toolkit built around{" "}
+          <span className="font-medium text-[var(--foreground)]">ASP.NET</span>{" "}
+          and{" "}
+          <span className="font-medium text-[var(--foreground)]">Flutter</span>.
+          I build things that automate the boring and fix the broken.
         </p>
 
         {/* CTAs */}

@@ -233,12 +233,12 @@ export interface SkillCategory {
 export const SKILLS: SkillCategory[] = [
   {
     category: "Languages",
-    icon: "💻",
+    icon: "languages",
     skills: ["JavaScript", "TypeScript", "C#", "HTML", "CSS", "SQL", "Python", "Dart"],
   },
   {
     category: "Frameworks & Libraries",
-    icon: "⚡",
+    icon: "frameworks",
     skills: [
       "ASP.NET Core",
       ".NET",
@@ -254,7 +254,7 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "APIs & Auth",
-    icon: "🔐",
+    icon: "auth",
     skills: [
       "REST APIs",
       "MVC Architecture",
@@ -265,12 +265,12 @@ export const SKILLS: SkillCategory[] = [
   },
   {
     category: "Databases",
-    icon: "🗄️",
+    icon: "databases",
     skills: ["PostgreSQL", "SQL Server", "MySQL", "Supabase", "MongoDB"],
   },
   {
     category: "Tools & Practices",
-    icon: "🛠️",
+    icon: "tools",
     skills: [
       "Git",
       "GitHub",

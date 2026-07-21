@@ -31,8 +31,23 @@ export default function Experience() {
         <div className="grid gap-12 lg:grid-cols-12">
           {/* Work Experience Column (7 cols) */}
           <div className="space-y-8 lg:col-span-7">
-            <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2">
-              <span className="text-[var(--accent)]">💼</span> Professional Experience
+            <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2.5">
+              <svg
+                xmlns="http://www.w3.org/2000/svg"
+                className="h-5 w-5 text-[var(--accent)]"
+                fill="none"
+                viewBox="0 0 24 24"
+                stroke="currentColor"
+                strokeWidth={2}
+                aria-hidden="true"
+              >
+                <path
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
+                  d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387M3.75 14.15a2.18 2.18 0 01-.75-1.661V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m10.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v1.284m9 0A48.208 48.208 0 0012 6c-3.008 0-5.967.143-8.877.417"
+                />
+              </svg>
+              Professional Experience
             </h3>
 
             <div className="relative border-l-2 border-[var(--border)] pl-6 space-y-10">
@@ -46,16 +61,46 @@ export default function Experience() {
           <div className="space-y-8 lg:col-span-5">
             {/* Education Card */}
             <div className="space-y-4">
-              <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2">
-                <span className="text-[var(--accent)]">🎓</span> Education
+              <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-[var(--accent)]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M4.26 10.147L12 14.634l7.74-4.487m-15.48 0L12 5.66l7.74 4.487m-15.48 0v4.487l7.74 4.487 7.74-4.487V10.15"
+                  />
+                </svg>
+                Education
               </h3>
               <EducationCard />
             </div>
 
             {/* Certifications List */}
             <div className="space-y-4 pt-4">
-              <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2">
-                <span className="text-[var(--accent)]">📜</span> Certifications
+              <h3 className="text-xl font-bold tracking-tight text-[var(--foreground)] flex items-center gap-2.5">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  className="h-5 w-5 text-[var(--accent)]"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  stroke="currentColor"
+                  strokeWidth={2}
+                  aria-hidden="true"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M9 12.75L11.25 15 15 9.75M21 12c0 1.268-.63 2.39-1.593 3.068a3.745 3.745 0 01-1.043 3.296 3.745 3.745 0 01-3.296 1.043A3.745 3.745 0 0112 21c-1.268 0-2.39-.63-3.068-1.593a3.746 3.746 0 01-3.296-1.043 3.745 3.745 0 01-1.043-3.296A3.745 3.745 0 013 12c0-1.268.63-2.39 1.593-3.068a3.745 3.745 0 011.043-3.296 3.746 3.746 0 013.296-1.043A3.746 3.746 0 0112 3c1.268 0 2.39.63 3.068 1.593a3.746 3.746 0 013.296 1.043 3.746 3.746 0 011.043 3.296A3.745 3.745 0 0121 12z"
+                  />
+                </svg>
+                Certifications
               </h3>
               <div className="space-y-3">
                 {CERTIFICATIONS.map((cert, index) => (

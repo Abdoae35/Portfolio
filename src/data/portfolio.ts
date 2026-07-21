@@ -237,6 +237,19 @@ export const SKILLS: SkillCategory[] = [
     skills: ["JavaScript", "TypeScript", "C#", "HTML", "CSS", "SQL", "Python", "Dart"],
   },
   {
+    category: "Mobile Development",
+    icon: "mobile",
+    skills: [
+      "Flutter",
+      "Cubit",
+      "BLoC",
+      "State Management",
+      "Shared Preferences",
+      "Dio (Networking)",
+      "Firebase",
+    ],
+  },
+  {
     category: "Frameworks & Libraries",
     icon: "frameworks",
     skills: [
@@ -249,7 +262,6 @@ export const SKILLS: SkillCategory[] = [
       "Node.js",
       "Express",
       "Tailwind CSS",
-      "Flutter",
     ],
   },
   {
@@ -272,8 +284,7 @@ export const SKILLS: SkillCategory[] = [
     category: "Tools & Practices",
     icon: "tools",
     skills: [
-      "Git",
-      "GitHub",
+      "Git & GitHub",
       "Postman",
       "Vercel",
       "OOP",

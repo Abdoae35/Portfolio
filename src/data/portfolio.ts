@@ -302,6 +302,7 @@ export interface SocialLink {
   label: string;
   href: string;
   ariaLabel: string;
+  download?: string;
 }
 
 export const SOCIAL_LINKS: SocialLink[] = [
@@ -319,6 +320,12 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: "LinkedIn",
     href: PERSONAL.linkedin,
     ariaLabel: "View Abdelrahman's LinkedIn profile",
+  },
+  {
+    label: "Resume",
+    href: PERSONAL.resumeUrl,
+    ariaLabel: "Download Abdelrahman's CV PDF",
+    download: "Abdelrahman_A_Elsheref_CV.pdf",
   },
 ];
 

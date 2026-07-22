@@ -94,7 +94,9 @@ export default function Hero() {
           {/* Resume download */}
           <a
             href={RESUME_URL}
-            download
+            download="Abdelrahman_A_Elsheref_CV.pdf"
+            target="_blank"
+            rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"
           >
             <svg

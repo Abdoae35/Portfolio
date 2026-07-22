@@ -80,7 +80,7 @@ export const PROJECTS: Project[] = [
       "Architected secure role-based access for job seekers and recruiters with seamless session handling.",
     ],
     liveUrl: "",
-    sourceUrl: "https://github.com/Abdoae35",
+    sourceUrl: "https://github.com/Abdoae35/job_board",
   },
   {
     title: "Food Trucks Platform",
@@ -101,7 +101,7 @@ export const PROJECTS: Project[] = [
       "Optimized query performance and schema structure with Knex.js migrations and PostgreSQL.",
     ],
     liveUrl: "",
-    sourceUrl: "https://github.com/Abdoae35",
+    sourceUrl: "https://github.com/Abdoae35/FoodTruckGIU",
   },
   {
     title: "Afforestation Achievement System",
@@ -121,7 +121,33 @@ export const PROJECTS: Project[] = [
       "Designed intuitive dashboards for monitoring environmental impact metrics across locations.",
     ],
     liveUrl: "",
-    sourceUrl: "https://github.com/Abdoae35",
+    sourceUrl: "https://github.com/Abdoae35/AffrostationPanel",
+  },
+  {
+    title: "Hospital Clinic Management System",
+    tagline: "Comprehensive ASP.NET Core MVC (.NET 9) medical facility management platform",
+    description:
+      "A production-ready web application built with ASP.NET Core MVC (.NET 9) and EF Core 9 that centralizes patient records, doctor schedules, EMR, automated billing, and appointment lifecycle management into a unified digital platform.",
+    techStack: [
+      "ASP.NET Core MVC",
+      ".NET 9",
+      "Entity Framework Core",
+      "SQL Server",
+      "ASP.NET Core Identity",
+      "Bootstrap 5",
+      "Chart.js",
+      "FullCalendar.js",
+      "Serilog",
+      "EPPlus",
+    ],
+    highlights: [
+      "Architected 4-tier role-based access control (Admin, Doctor, Receptionist, Patient) with ASP.NET Core Identity and audit logging.",
+      "Implemented end-to-end appointment lifecycle management with double-booking prevention, doctor availability rules, and FullCalendar.js integration.",
+      "Built Electronic Medical Records (EMR) with dynamic prescription items and automated invoice generation upon appointment completion.",
+      "Designed interactive analytics dashboards featuring Chart.js metrics, DataTables filtering, and Excel report exports via EPPlus.",
+    ],
+    liveUrl: "",
+    sourceUrl: "https://github.com/Abdoae35/ClinicManagment",
   },
   {
     title: "se7aty",

@@ -13,7 +13,7 @@ export const PERSONAL = {
   email: "abdelrahman3535.elsheref@gmail.com",
   github: "https://github.com/Abdoae35",
   linkedin: "https://www.linkedin.com/in/abdelrahman-elsheref/",
-  resumeUrl: "/resme.pdf",
+  resumeUrl: "/resume.pdf",
 };
 
 // ── Navigation ──────────────────────────────────
@@ -351,7 +351,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: "Resume",
     href: PERSONAL.resumeUrl,
     ariaLabel: "Download Abdelrahman's CV PDF",
-    download: "Abdelrahman_A_Elsheref_CV.pdf",
+    download: "Abdelrahman ELsheref's Cv.pdf",
   },
 ];
 

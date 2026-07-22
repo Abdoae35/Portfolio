@@ -13,7 +13,7 @@ export const PERSONAL = {
   email: "abdelrahman3535.elsheref@gmail.com",
   github: "https://github.com/Abdoae35",
   linkedin: "https://www.linkedin.com/in/abdelrahman-elsheref/",
-  resumeUrl: "/resume.pdf",
+  resumeUrl: "/Abdelrahman ELsheref's Cv.pdf",
 };
 
 // ── Navigation ──────────────────────────────────

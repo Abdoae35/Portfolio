@@ -3,7 +3,10 @@
   "version": "0.1.0",
   "private": true,
   "scripts": {
+    "sync:cv": "node scripts/sync-cv.mjs",
+    "predev": "npm run sync:cv",
     "dev": "next dev",
+    "prebuild": "npm run sync:cv",
     "build": "next build",
     "start": "next start",
     "lint": "eslint"

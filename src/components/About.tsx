@@ -1,6 +1,6 @@
 "use client";
 
-import { EDUCATION, PERSONAL } from "@/data/portfolio";
+import { EDUCATION, PERSONAL, PROJECTS } from "@/data/portfolio";
 import { useScrollReveal } from "@/hooks/useScrollReveal";
 
 /**
@@ -25,28 +25,28 @@ export default function About() {
           <div className="rounded-2xl border border-[var(--border)] bg-[var(--surface)] p-8 sm:p-10">
             <div className="space-y-4 text-[var(--muted)] leading-relaxed text-base sm:text-lg">
               <p>
-                I&apos;m <strong className="text-[var(--foreground)]">{PERSONAL.name}</strong>, a final-year Computer Science student based in {PERSONAL.location} with a {EDUCATION.gpa}. I am deeply passionate about software engineering and building solutions that automate manual processes and solve real-world problems.
+                I&apos;m <strong className="text-[var(--foreground)]">{PERSONAL.name}</strong>, a final-year Computer Science student at {EDUCATION.institution}, based in {PERSONAL.location}.
               </p>
               <p>
-                Over the past year, I&apos;ve delivered full-stack web applications for clients as a freelance software engineer on Mostaqel and Upwork, and honed my backend and full-stack capabilities with C#, ASP.NET Core, and SQL Server through the DEPI Training Program.
+                I build web and mobile applications with .NET, React, Node.js, and Flutter. My experience includes freelance development, an internship at InnoTech Egypt, and apprenticeships in full-stack web and Flutter development through DEPI.
               </p>
               <p>
-                My goal is to grow as a software engineer by joining an innovative technology team where I can contribute to impactful, high-scale products, solve challenging problems, and continuously level up my skills.
+                I also work on autonomous racing simulations with the Formula Student AI team, using Python, ROS, Gazebo, and RViz.
               </p>
             </div>
 
             {/* Key highlights / quick stats */}
             <div className="mt-8 grid grid-cols-2 gap-4 border-t border-[var(--border)] pt-8 sm:grid-cols-3 text-center">
               <div>
-                <span className="block text-2xl font-bold text-[var(--accent)]">2027</span>
+                <span className="block text-2xl font-bold text-[var(--accent)]">{EDUCATION.graduationYear}</span>
                 <span className="text-xs text-[var(--muted)]">Graduation Year</span>
               </div>
               <div>
-                <span className="block text-2xl font-bold text-[var(--accent)]">3.4 / 4.0</span>
+                <span className="block text-2xl font-bold text-[var(--accent)]">{EDUCATION.gpa}</span>
                 <span className="text-xs text-[var(--muted)]">Academic GPA</span>
               </div>
               <div className="col-span-2 sm:col-span-1">
-                <span className="block text-2xl font-bold text-[var(--accent)]">5+</span>
+                <span className="block text-2xl font-bold text-[var(--accent)]">{PROJECTS.length}</span>
                 <span className="text-xs text-[var(--muted)]">Major Projects Built</span>
               </div>
             </div>

@@ -8,12 +8,12 @@
 export const PERSONAL = {
   name: "Abdelrahman A. Elsheref",
   title: "Final-year CS Student & Software Engineer",
-  location: "Cairo, Egypt",
+  location: "6th of October, Egypt",
   phone: "+20 1143850502",
   email: "abdelrahman3535.elsheref@gmail.com",
   github: "https://github.com/Abdoae35",
   linkedin: "https://www.linkedin.com/in/abdelrahman-elsheref/",
-  resumeUrl: "/Abdelrahman ELsheref's Cv.pdf",
+  resumeUrl: "/generated/cv.pdf",
 };
 
 // ── Navigation ──────────────────────────────────
@@ -40,6 +40,17 @@ export interface Project {
 }
 
 export const PROJECTS: Project[] = [
+  {
+    title: "Campeones – Multi-Branch Gym Management System",
+    tagline: "Multi-branch gym management platform",
+    description: "A platform in development for managing memberships, attendance, sales, financial operations, and employees across gym branches.",
+    techStack: ["ASP.NET Core", "PostgreSQL", "React"],
+    highlights: [
+      "Designed a layered backend architecture with role-based access control, business workflows, and audit logging.",
+    ],
+    liveUrl: "",
+    sourceUrl: "",
+  },
   {
     title: "FitPanel",
     tagline: "SaaS platform for online fitness coaches",
@@ -107,18 +118,16 @@ export const PROJECTS: Project[] = [
     title: "Afforestation Achievement System",
     tagline: "Plantation progress & environmental management platform",
     description:
-      "A full-stack web application built to monitor afforestation projects with multi-role access (Admin, User, Viewer), real-time progress tracking, and interactive data visualization.",
+      "A role-based management system for recording planting activities, managing data, and generating reports across multiple locations.",
     techStack: [
-      "Blazor",
-      "ASP.NET Core",
+      "ASP.NET Core MVC",
       "Entity Framework Core",
       "SQL Server",
       "C#",
     ],
     highlights: [
-      "Developed a multi-tier permission system with Admin, User, and Viewer roles.",
-      "Implemented secure CRUD operations and data visualization for plantation progress tracking.",
-      "Designed intuitive dashboards for monitoring environmental impact metrics across locations.",
+      "Implemented role-based access and data management for planting activities.",
+      "Generated reports across multiple locations.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/AffrostationPanel",
@@ -141,7 +150,7 @@ export const PROJECTS: Project[] = [
       "EPPlus",
     ],
     highlights: [
-      "Architected 4-tier role-based access control (Admin, Doctor, Receptionist, Patient) with ASP.NET Core Identity and audit logging.",
+      "Designed a 12-entity relational database and role-based access control with ASP.NET Core Identity.",
       "Implemented end-to-end appointment lifecycle management with double-booking prevention, doctor availability rules, and FullCalendar.js integration.",
       "Built Electronic Medical Records (EMR) with dynamic prescription items and automated invoice generation upon appointment completion.",
       "Designed interactive analytics dashboards featuring Chart.js metrics, DataTables filtering, and Excel report exports via EPPlus.",
@@ -184,6 +193,36 @@ export interface ExperienceItem {
 
 export const EXPERIENCES: ExperienceItem[] = [
   {
+    role: "Cybersecurity Training",
+    company: "National Telecom Regulatory Authority (NTRA)",
+    location: "Smart Village, Egypt",
+    period: "Aug 2026",
+    type: "Training",
+    bullets: ["Completed practical training covering cybersecurity fundamentals and security concepts."],
+  },
+  {
+    role: "Simulation Team Member",
+    company: "Formula Student AI University Racing Team",
+    location: "Egypt",
+    period: "Jul 2026 – Present",
+    type: "Student activity",
+    bullets: [
+      "Worked on autonomous racing simulation tasks using Python, ROS, Gazebo, and RViz in Docker-based Linux environments.",
+      "Collaborated on simulation testing, troubleshooting, and technical discussions.",
+    ],
+  },
+  {
+    role: "Flutter Developer",
+    company: "DEPI (Digital Egypt Pioneers Initiative)",
+    location: "Egypt",
+    period: "Nov 2025 – Jul 2026",
+    type: "Apprenticeship",
+    bullets: [
+      "Developed cross-platform mobile applications using Flutter and Dart, focusing on responsive interfaces and API integration.",
+      "Worked with state management, authentication, application architecture, and backend integration.",
+    ],
+  },
+  {
     role: "Freelance Software Engineer",
     company: "Mostaqel & Upwork",
     location: "Remote",
@@ -192,19 +231,27 @@ export const EXPERIENCES: ExperienceItem[] = [
     bullets: [
       "Delivered full-stack web projects for clients using JavaScript/TypeScript, React, Node.js, and .NET.",
       "Built and consumed REST APIs, working directly with clients from initial requirements to production deployment.",
-      "Ensured high code quality, security practices, and responsive design across all client deliverables.",
+      "Ensured high code quality, security practices, and responsive design across client deliverables.",
     ],
   },
   {
-    role: "Full-Stack Web Developer (Apprenticeship)",
-    company: "DEPI Training Program (Digital Egypt Pioneers Initiative)",
-    location: "Hybrid",
+    role: "Full-Stack Web Developer",
+    company: "DEPI (Digital Egypt Pioneers Initiative)",
+    location: "Egypt",
     period: "Oct 2024 – May 2025",
     type: "Apprenticeship",
     bullets: [
-      "Developed full-stack web applications and RESTful APIs using C#, ASP.NET Core, and SQL Server.",
-      "Collaborated with a development team using Git to build and maintain scalable applications.",
+      "Developed full-stack web applications and RESTful APIs using C#, ASP.NET Core, Entity Framework Core, and SQL Server.",
+      "Collaborated on team projects using OOP, database design, Git, debugging, and problem-solving skills.",
     ],
+  },
+  {
+    role: "Software Engineering Intern",
+    company: "InnoTech Egypt",
+    location: "Egypt",
+    period: "Fall 2024",
+    type: "Internship",
+    bullets: ["Gained hands-on experience with .NET and Blazor, RabbitMQ messaging, and Redis caching."],
   },
 ];
 
@@ -214,6 +261,7 @@ export interface EducationItem {
   location: string;
   period: string;
   gpa: string;
+  graduationYear: string;
 }
 
 export const EDUCATION: EducationItem = {
@@ -221,7 +269,8 @@ export const EDUCATION: EducationItem = {
   institution: "Tanta University",
   location: "Tanta, Egypt",
   period: "Expected Graduation: 2027",
-  gpa: "GPA: 3.4 / 4.0",
+  gpa: "3.4 / 4.0",
+  graduationYear: "2027",
 };
 
 export interface Certification {
@@ -235,6 +284,16 @@ export const CERTIFICATIONS: Certification[] = [
     title: ".NET Full-Stack Program",
     issuer: "DEPI (Digital Egypt Pioneers Initiative)",
     year: "2024 – 2025",
+  },
+  {
+    title: "Flutter Development",
+    issuer: "DEPI (Digital Egypt Pioneers Initiative)",
+    year: "2025 – 2026",
+  },
+  {
+    title: "Cybersecurity Training",
+    issuer: "National Telecom Regulatory Authority (NTRA)",
+    year: "2026",
   },
   {
     title: "Competitive Programming – ECPC Competition",
@@ -260,7 +319,7 @@ export const SKILLS: SkillCategory[] = [
   {
     category: "Languages",
     icon: "languages",
-    skills: ["JavaScript", "TypeScript", "C#", "HTML", "CSS", "SQL", "Python", "Dart"],
+    skills: ["JavaScript", "TypeScript", "C#", "Java", "HTML", "CSS", "SQL", "Python", "Dart"],
   },
   {
     category: "Mobile Development",
@@ -296,8 +355,9 @@ export const SKILLS: SkillCategory[] = [
     skills: [
       "REST APIs",
       "MVC Architecture",
+      "Role-Based Access Control",
       "Supabase Auth",
-      "Microsoft Identity",
+      "ASP.NET Core Identity",
       "Authentication & Authorization",
     ],
   },
@@ -311,6 +371,12 @@ export const SKILLS: SkillCategory[] = [
     icon: "tools",
     skills: [
       "Git & GitHub",
+      "Docker",
+      "ROS",
+      "Gazebo",
+      "RViz",
+      "Repository Pattern",
+      "Service Layer",
       "Postman",
       "Vercel",
       "OOP",
@@ -351,7 +417,7 @@ export const SOCIAL_LINKS: SocialLink[] = [
     label: "Resume",
     href: PERSONAL.resumeUrl,
     ariaLabel: "Download Abdelrahman's CV PDF",
-    download: "Abdelrahman ELsheref's Cv.pdf",
+    download: "Abdelrahman-Elsheref-CV.pdf",
   },
 ];
 

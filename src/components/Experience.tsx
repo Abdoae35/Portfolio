@@ -47,7 +47,7 @@ export default function Experience() {
                   d="M20.25 14.15v4.25c0 1.094-.787 2.036-1.872 2.18-2.087.277-4.216.42-6.378.42s-4.291-.143-6.378-.42c-1.085-.144-1.872-1.086-1.872-2.18v-4.25m16.5 0a2.18 2.18 0 00.75-1.661V8.706c0-1.081-.768-2.015-1.837-2.175a48.114 48.114 0 00-3.413-.387M3.75 14.15a2.18 2.18 0 01-.75-1.661V8.706c0-1.081.768-2.015 1.837-2.175a48.111 48.111 0 013.413-.387m10.5 0V5.25A2.25 2.25 0 0013.5 3h-3a2.25 2.25 0 00-2.25 2.25v1.284m9 0A48.208 48.208 0 0012 6c-3.008 0-5.967.143-8.877.417"
                 />
               </svg>
-              Professional Experience
+              Experience &amp; Training
             </h3>
 
             <div className="relative border-l-2 border-[var(--border)] pl-6 space-y-10">
@@ -144,7 +144,7 @@ function ExperienceCard({
         </div>
 
         <p className="mt-1 text-sm font-medium text-[var(--muted)]">
-          {item.company} &bull; <span className="text-[var(--foreground)]">{item.location}</span>
+          {item.company} &bull; {item.type} &bull; <span className="text-[var(--foreground)]">{item.location}</span>
         </p>
 
         <ul className="mt-4 space-y-2 text-sm text-[var(--muted)]">
@@ -173,7 +173,7 @@ function EducationCard() {
           {EDUCATION.degree}
         </h4>
         <span className="text-xs font-semibold text-[var(--accent)]">
-          {EDUCATION.gpa}
+          GPA: {EDUCATION.gpa}
         </span>
       </div>
       <p className="mt-1 text-sm text-[var(--muted)]">

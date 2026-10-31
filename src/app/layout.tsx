@@ -28,7 +28,7 @@ export const metadata: Metadata = {
     "Next.js",
     "Node.js",
     "Flutter",
-    "Cairo",
+    "6th of October",
     "Egypt",
     "CS student",
   ],

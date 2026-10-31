@@ -37,11 +37,9 @@ export default function Hero() {
 
         {/* Tagline */}
         <p className="animate-fade-up mt-6 text-lg leading-relaxed text-[var(--muted)] sm:text-xl">
-          I&apos;m a final-year CS student who treats software like a craft — obsessive attention to detail, daily discipline, and a full-stack toolkit built around{" "}
-          <span className="font-medium text-[var(--foreground)]">ASP.NET</span>{" "}
-          and{" "}
-          <span className="font-medium text-[var(--foreground)]">Flutter</span>.
-          I build things that automate the boring and fix the broken.
+          I&apos;m a final-year Computer Science student building web and mobile
+          applications with .NET, React, Node.js, and Flutter. I enjoy solving
+          problems and developing software for real business needs.
         </p>
 
         {/* CTAs */}
@@ -94,7 +92,7 @@ export default function Hero() {
           {/* Resume download */}
           <a
             href={RESUME_URL}
-            download="Abdelrahman ELsheref's Cv.pdf"
+            download="Abdelrahman-Elsheref-CV.pdf"
             target="_blank"
             rel="noopener noreferrer"
             className="inline-flex items-center gap-2 rounded-lg border border-[var(--border)] bg-[var(--surface)] px-6 py-3 text-sm font-medium text-[var(--foreground)] transition-colors hover:border-[var(--accent)] hover:text-[var(--accent)]"

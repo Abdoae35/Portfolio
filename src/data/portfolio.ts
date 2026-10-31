@@ -42,11 +42,16 @@ export interface Project {
 export const PROJECTS: Project[] = [
   {
     title: "Campeones – Multi-Branch Gym Management System",
-    tagline: "Multi-branch gym management platform",
-    description: "A platform in development for managing memberships, attendance, sales, financial operations, and employees across gym branches.",
-    techStack: ["ASP.NET Core", "PostgreSQL", "React"],
+    tagline: "Multi-branch gym operations backend",
+    description:
+      "An in-development gym management backend that coordinates memberships, attendance, staff, and financial operations across branches through a layered ASP.NET Core API.",
+    techStack: ["C#", ".NET 10", "ASP.NET Core", "Entity Framework Core", "PostgreSQL", "ASP.NET Core Identity", "JWT", "xUnit", "React (separate frontend)"],
     highlights: [
-      "Designed a layered backend architecture with role-based access control, business workflows, and audit logging.",
+      "Combines role permissions, per-user allow/deny overrides, and branch-scoped authorization using ASP.NET Core Identity and JWT.",
+      "Manages membership plans, renewals, freezes, and check-ins with subscription and session-balance validation.",
+      "Coordinates sales, installments, refunds, shared cash drawers, and shift reconciliation using transactions and row locks; supported payment and refund retries are idempotent.",
+      "Includes employee and coach management, lead follow-ups, and audit records for sensitive operations.",
+      "Uses PostgreSQL and EF Core, with xUnit API, permission, financial workflow, and concurrency tests.",
     ],
     liveUrl: "",
     sourceUrl: "",
@@ -55,19 +60,20 @@ export const PROJECTS: Project[] = [
     title: "FitPanel",
     tagline: "SaaS platform for online fitness coaches",
     description:
-      "A comprehensive Blazor Server SaaS application built on .NET 9 that gives fitness coaches a centralized dashboard to manage clients, track subscriptions, and deliver personalized workout and diet plans — complete with professional PDF exports.",
+      "A Blazor Server coaching platform that brings client profiles, subscription tracking, personalized nutrition plans, and workout programs into one dashboard.",
     techStack: [
       "Blazor Server",
       "ASP.NET Core",
       "Entity Framework Core",
       "SQL Server",
       "PDFShift API",
+      "CalorieNinjas API",
     ],
     highlights: [
-      "Engineered full English/Arabic localization using .resx resource files, enabling seamless RTL layout switching at runtime.",
-      "Implemented role-based access control (Admin & Coach) and designed a scalable relational database schema.",
-      "Redesigned PDF exports by replacing emoji icons with inline SVGs, producing a polished athletic look.",
-      "Applied OWASP security best practices across input validation, anti-CSRF, and secure authentication flows.",
+      "Builds diet plans with meals, alternatives, and macro totals, alongside workout splits with exercises, warm-ups, and cardio.",
+      "Saves reusable coach-specific plan templates and integrates CalorieNinjas for nutrition lookup.",
+      "Generates branded diet and workout PDFs through PDFShift, with configurable themes and coach details.",
+      "Uses Admin and Coach access policies, an EF Core relational model, and English/Arabic localization with RTL support.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/FitPanel",
@@ -76,7 +82,7 @@ export const PROJECTS: Project[] = [
     title: "JobBoard",
     tagline: "Full-stack job platform connecting recruiters & job seekers",
     description:
-      "A modern job board web application featuring secure role-based authentication, interactive recruiter dashboards, and job application tracking built with Next.js App Router and Supabase.",
+      "A Next.js job board connecting recruiters and job seekers, with separate dashboards for posting vacancies, reviewing applications, and tracking job searches.",
     techStack: [
       "Next.js",
       "React",
@@ -84,11 +90,12 @@ export const PROJECTS: Project[] = [
       "Node.js",
       "PostgreSQL",
       "Supabase Auth",
+      "Tailwind CSS",
     ],
     highlights: [
-      "Implemented job posting, application tracking, and recruiter management via REST APIs on Supabase/PostgreSQL.",
-      "Built a responsive UI with React and Next.js App Router using reusable components and protected routes.",
-      "Architected secure role-based access for job seekers and recruiters with seamless session handling.",
+      "Supports job creation, editing, and status changes; recruiters can review applications and update their status.",
+      "Lets job seekers search and save vacancies, apply with a cover letter, track applications, and withdraw pending submissions.",
+      "Uses Supabase Auth, role-aware route guards, and PostgreSQL row-level security policies for profiles, jobs, applications, and saved jobs.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/job_board",
@@ -97,7 +104,7 @@ export const PROJECTS: Project[] = [
     title: "Food Trucks Platform",
     tagline: "End-to-end ordering platform for customers & food truck owners",
     description:
-      "A full-stack web application designed to connect users with local food trucks, offering streamlined menu browsing, shopping carts, and real-time order status tracking.",
+      "A food truck ordering application that connects customers browsing menus and scheduling pickups with owners managing availability, menus, and orders.",
     techStack: [
       "Node.js",
       "Express",
@@ -107,9 +114,9 @@ export const PROJECTS: Project[] = [
       "RESTful API",
     ],
     highlights: [
-      "Designed and built 22 RESTful API endpoints for orders, carts, menus, and user management.",
-      "Implemented shopping cart management, order placement, and order status tracking end-to-end.",
-      "Optimized query performance and schema structure with Knex.js migrations and PostgreSQL.",
+      "Provides customer and truck-owner API routes for menus, carts, orders, and user accounts using Express and Knex with PostgreSQL.",
+      "Validates menu availability and prevents a cart from combining items from different trucks before order placement.",
+      "Supports scheduled pickups, customer order history, and owner updates through pending, preparing, ready, and completed statuses.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/FoodTruckGIU",
@@ -118,16 +125,19 @@ export const PROJECTS: Project[] = [
     title: "Afforestation Achievement System",
     tagline: "Plantation progress & environmental management platform",
     description:
-      "A role-based management system for recording planting activities, managing data, and generating reports across multiple locations.",
+      "A web application that replaces manual spreadsheet consolidation with centralized records and reports for planting activities across locations and time periods.",
     techStack: [
       "ASP.NET Core MVC",
+      "ASP.NET Core Web API",
       "Entity Framework Core",
       "SQL Server",
       "C#",
+      "ClosedXML",
     ],
     highlights: [
-      "Implemented role-based access and data management for planting activities.",
-      "Generated reports across multiple locations.",
+      "Separates the MVC frontend from a layered Web API and EF Core data access, with role-based Admin, User, and Viewer workflows.",
+      "Records plant types, locations, quantities, and planting dates, with search and paginated results.",
+      "Summarizes planting activity and exports date-range reports to Excel using ClosedXML.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/AffrostationPanel",
@@ -136,7 +146,7 @@ export const PROJECTS: Project[] = [
     title: "Hospital Clinic Management System",
     tagline: "Comprehensive ASP.NET Core MVC (.NET 9) medical facility management platform",
     description:
-      "A production-ready web application built with ASP.NET Core MVC (.NET 9) and EF Core 9 that centralizes patient records, doctor schedules, EMR, automated billing, and appointment lifecycle management into a unified digital platform.",
+      "An ASP.NET Core MVC application that centralizes patient records, doctor schedules, appointments, medical records, and billing for a clinic.",
     techStack: [
       "ASP.NET Core MVC",
       ".NET 9",
@@ -150,33 +160,13 @@ export const PROJECTS: Project[] = [
       "EPPlus",
     ],
     highlights: [
-      "Designed a 12-entity relational database and role-based access control with ASP.NET Core Identity.",
-      "Implemented end-to-end appointment lifecycle management with double-booking prevention, doctor availability rules, and FullCalendar.js integration.",
-      "Built Electronic Medical Records (EMR) with dynamic prescription items and automated invoice generation upon appointment completion.",
-      "Designed interactive analytics dashboards featuring Chart.js metrics, DataTables filtering, and Excel report exports via EPPlus.",
+      "Uses a 12-entity relational model and ASP.NET Core Identity roles for administrators, doctors, receptionists, and patients.",
+      "Checks doctor schedules and booking conflicts, tracks appointment statuses, and generates invoices when appointments are completed.",
+      "Connects medical records, diagnoses, and prescriptions to appointments, with role-restricted access.",
+      "Provides calendar and analytics views plus appointment and revenue reporting with Excel export through EPPlus.",
     ],
     liveUrl: "",
     sourceUrl: "https://github.com/Abdoae35/ClinicManagment",
-  },
-  {
-    title: "se7aty",
-    tagline: "Mobile health companion application",
-    description:
-      "A Flutter mobile application designed around clean architecture principles, providing a smooth, native-feel experience backed by Firebase for authentication and real-time data sync.",
-    techStack: [
-      "Flutter",
-      "Dart",
-      "Firebase",
-      "Dio",
-      "Cubit / BlocBuilder",
-    ],
-    highlights: [
-      "Implemented structured state management with Cubit and BlocBuilder, keeping UI logic testable and decoupled from business rules.",
-      "Configured Firebase services end-to-end — authentication, Firestore, and analytics — with environment-specific build flavors.",
-      "Generated polished adaptive app icons across all densities using flutter_launcher_icons.",
-    ],
-    liveUrl: "",
-    sourceUrl: "https://github.com/Abdoae35",
   },
 ];
 

@@ -13,8 +13,9 @@ import Footer from "@/components/Footer";
 export default function Home() {
   return (
     <>
+      <a className="skip-link" href="#main-content">Skip to main content</a>
       <Navbar />
-      <main className="flex-1">
+      <main id="main-content" tabIndex={-1}>
         <Hero />
         <Projects />
         <Experience />

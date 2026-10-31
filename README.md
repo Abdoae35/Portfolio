@@ -50,17 +50,15 @@ src/
 │   └── page.tsx        # Main page composing all sections
 ├── components/
 │   ├── Navbar.tsx      # Fixed nav with mobile hamburger
-│   ├── Hero.tsx        # Full-viewport hero with CTAs
-│   ├── Projects.tsx    # Project cards with details
+│   ├── Hero.tsx        # Introduction and primary links
+│   ├── Projects.tsx    # Featured and additional projects
 │   ├── Experience.tsx  # Experience, education and certifications
 │   ├── Skills.tsx      # Categorized skill groups
 │   ├── About.tsx       # Short bio section
 │   ├── Contact.tsx     # Social/contact links
 │   └── Footer.tsx      # Minimal footer
-├── data/
-│   └── portfolio.ts    # All content data (edit this to update content)
-└── hooks/
-    └── useScrollReveal.ts  # Intersection Observer for scroll animations
+└── data/
+    └── portfolio.ts    # Portfolio content data
 ```
 
 ## Customization Checklist

@@ -1,14 +1,9 @@
 import type { Metadata } from "next";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist } from "next/font/google";
 import "./globals.css";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
-  subsets: ["latin"],
-});
-
-const geistMono = Geist_Mono({
-  variable: "--font-geist-mono",
   subsets: ["latin"],
 });
 
@@ -36,14 +31,13 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://github.com/Abdoae35",
     title: "Abdelrahman A. Elsheref — Software Engineer",
     description:
       "Final-year CS student & software engineer specializing in .NET, Next.js, Node.js, and Flutter.",
     siteName: "Abdelrahman A. Elsheref Portfolio",
   },
   twitter: {
-    card: "summary_large_image",
+    card: "summary",
     title: "Abdelrahman A. Elsheref — Software Engineer",
     description:
       "Final-year CS student & software engineer specializing in .NET, Next.js, Node.js, and Flutter.",
@@ -62,7 +56,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${geistSans.variable} ${geistMono.variable} h-full antialiased`}
+      className={`${geistSans.variable}`}
     >
       <body className="min-h-full flex flex-col">{children}</body>
     </html>
